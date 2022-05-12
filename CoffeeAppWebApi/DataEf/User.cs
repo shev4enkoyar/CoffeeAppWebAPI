@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
-namespace CoffeeAppWebApi.Models
+namespace CoffeeAppWebApi.DataEf
 {
     [Index(nameof(Username), IsUnique = true)]
     [Index(nameof(PhoneNumber), IsUnique = true)]

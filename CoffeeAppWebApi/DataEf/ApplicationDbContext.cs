@@ -1,5 +1,4 @@
-﻿using CoffeeAppWebApi.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace CoffeeAppWebApi.DataEf
 {

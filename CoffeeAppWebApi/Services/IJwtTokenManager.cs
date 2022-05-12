@@ -1,5 +1,4 @@
-﻿using CoffeeAppWebApi.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using CoffeeAppWebApi.DataEf;
 
 namespace CoffeeAppWebApi.Services
 {

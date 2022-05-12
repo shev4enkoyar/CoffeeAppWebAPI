@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace CoffeeAppWebApi.Models
+namespace CoffeeAppWebApi.DataEf
 {
     public class Favorite
     {

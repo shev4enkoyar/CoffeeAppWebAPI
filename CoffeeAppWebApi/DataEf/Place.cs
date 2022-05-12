@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
-namespace CoffeeAppWebApi.Models
+namespace CoffeeAppWebApi.DataEf
 {
     [Index(nameof(Latitude), nameof(Longitude), IsUnique = true, Name = "Location")]
     public class Place

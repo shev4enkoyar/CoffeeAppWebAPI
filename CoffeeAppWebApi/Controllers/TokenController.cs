@@ -1,4 +1,4 @@
-﻿using CoffeeAppWebApi.Models;
+﻿using CoffeeAppWebApi.DataEf;
 using CoffeeAppWebApi.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

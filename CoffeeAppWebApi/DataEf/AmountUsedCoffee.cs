@@ -1,8 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Text.Json.Serialization;
 
-namespace CoffeeAppWebApi.Models
+namespace CoffeeAppWebApi.DataEf
 {
     public class AmountUsedCoffee
     {

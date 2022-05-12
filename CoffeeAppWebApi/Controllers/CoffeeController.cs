@@ -35,7 +35,7 @@ namespace CoffeeAppWebApi.Controllers
             string login = _tokenManager.Decode(jwt, "nameid");
             int userId = _context.Users.FirstOrDefault(x => x.Username == login).Id;
             var usedCoffee = _context.AmountUsedCoffees.Include(x => x.CoffeeList).Where(x => x.UserId == userId);
-            if (usedCoffee.Count() <= 0)
+            if (!usedCoffee.Any())
                 return NotFound();
             var stats = usedCoffee.GroupBy(x => x.CoffeeList.Name).Select(g => new { Name = g.Key, Count = g.Count() });
             return Ok(stats);
@@ -46,7 +46,7 @@ namespace CoffeeAppWebApi.Controllers
         public IActionResult GetPlaceCoffeeStats(int id)
         {
             var usedCoffee = _context.AmountUsedCoffees.Include(x => x.CoffeeList).Where(x => x.PlaceId == id);
-            if (usedCoffee.Count() <= 0)
+            if (!usedCoffee.Any())
                 return NotFound();
             var stats = usedCoffee.GroupBy(x => x.CoffeeList.Name).Select(g => new { Name = g.Key, Count = g.Count() });
             return Ok(stats);

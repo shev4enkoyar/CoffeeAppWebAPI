@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
-namespace CoffeeAppWebApi.Models
+namespace CoffeeAppWebApi.DataEf
 {
     public class CoffeeList
     {
