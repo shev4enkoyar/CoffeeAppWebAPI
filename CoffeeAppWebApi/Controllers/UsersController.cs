@@ -1,10 +1,8 @@
 ﻿using CoffeeAppWebApi.DataEf;
 using CoffeeAppWebApi.Helpers;
-using CoffeeAppWebApi.Models;
 using CoffeeAppWebApi.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 
 namespace CoffeeAppWebApi.Controllers
