@@ -65,7 +65,16 @@ namespace CoffeeAppWebApi.Controllers
             if (System.IO.File.Exists(path))
                 return PhysicalFile(path, "image/jpeg");
             return NotFound($"Image not found on path: {path}");
+        }
 
+        [AllowAnonymous]
+        [HttpGet("getimageuri/{id}")]
+        public IActionResult GetImageUri(int id)
+        {
+            var query = _context.Places.FirstOrDefault(x => x.Id == id);
+            if (query == null)
+                return NotFound();
+            return Ok(query.Image);
         }
     }
 }
