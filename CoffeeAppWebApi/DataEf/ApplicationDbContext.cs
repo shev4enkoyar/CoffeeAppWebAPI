@@ -14,5 +14,6 @@ namespace CoffeeAppWebApi.DataEf
         public DbSet<Favorite> Favorites { get; set; }
         public DbSet<CoffeeList> CoffeeList { get; set; }
         public DbSet<AmountUsedCoffee> AmountUsedCoffees { get; set; }
+        public DbSet<UserVerificationCode> UserVerificationCodes{ get; set; }
     }
 }

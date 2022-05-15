@@ -25,8 +25,7 @@ namespace CoffeeAppWebApi.Controllers
         [HttpGet("getinfo")]
         public IActionResult GetInfo([FromHeader] string authorization)
         {
-            string jwt = authorization.Split(' ')[1];
-            var login = _tokenManager.Decode(jwt, "nameid");
+            var login = _tokenManager.Decode(authorization, "nameid");
             var userInfo = _context.Users.FirstOrDefault(x => x.Username == login).WithoutPrivateInfo();
             if (userInfo == null)
                 return NotFound();
@@ -37,8 +36,7 @@ namespace CoffeeAppWebApi.Controllers
         [HttpGet("getfavorites")]
         public IActionResult GetFavorites([FromHeader] string authorization)
         {
-            string jwt = authorization.Split(' ')[1];
-            var login = _tokenManager.Decode(jwt, "nameid");
+            var login = _tokenManager.Decode(authorization, "nameid");
             var favorites = _context.Favorites.FirstOrDefault(x => x.User.Username == login);
             if (favorites == null)
                 return NotFound();

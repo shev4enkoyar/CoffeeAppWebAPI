@@ -31,8 +31,7 @@ namespace CoffeeAppWebApi.Controllers
         [HttpGet("getusercoffeestats")]
         public IActionResult GetUserCoffeeStats([FromHeader] string authorization)
         {
-            string jwt = authorization.Split(' ')[1];
-            string login = _tokenManager.Decode(jwt, "nameid");
+            string login = _tokenManager.Decode(authorization, "nameid");
             int userId = _context.Users.FirstOrDefault(x => x.Username == login).Id;
             var usedCoffee = _context.AmountUsedCoffees.Include(x => x.CoffeeList).Where(x => x.UserId == userId);
             if (!usedCoffee.Any())
