@@ -55,7 +55,6 @@ namespace CoffeeAppWebApi.Services
                     return $"activateAccount {tokenHandler.WriteToken(token)}";
                 }
                 return null;
-                
             }
             return tokenHandler.WriteToken(token);
         }
