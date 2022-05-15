@@ -29,5 +29,7 @@ namespace CoffeeAppWebApi.DataEf
         public List<Favorite> Favorites { get; set; } = new List<Favorite>();
         [JsonIgnore]
         public List<AmountUsedCoffee> AmountUsedCoffee { get; set; } = new List<AmountUsedCoffee>();
+        [JsonIgnore]
+        public UserVerificationCode UserVerificationCode { get; set; }
     }
 }
